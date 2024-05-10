@@ -1,6 +1,7 @@
 from agentspace import Agent, space
 import openai
 from speak import speak
+import api_key
 
 class AnswerAgent(Agent):
 
@@ -10,7 +11,7 @@ class AnswerAgent(Agent):
         super().__init__()
         
     def init(self):
-        openai.api_key = ('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')
+        openai.api_key = (api_key.API_KEY)
         space.attach_trigger(self.namePrompt,self)
  
     def senseSelectAct(self):

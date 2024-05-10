@@ -1,5 +1,6 @@
 from agentspace import Agent, space
 import openai
+import api_key
 
 
 class RoleAgent(Agent):
@@ -15,7 +16,7 @@ class RoleAgent(Agent):
         
     def init(self):
         print()
-        openai.api_key = ('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')
+        openai.api_key = (api_key.API_KEY)
         print('ready to answer')
         space.attach_trigger(self.Input,self)
 

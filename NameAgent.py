@@ -2,6 +2,7 @@ from agentspace import Agent, space
 import openai
 from pyicubsim import iCubHead, iCubTorso, iCubRightArm, iCubLeftArm, iCubRightLeg, iCubLeftLeg
 import time
+import api_key
 
 
 class NameAgent(Agent):
@@ -14,7 +15,7 @@ class NameAgent(Agent):
         super().__init__()
         
     def init(self):
-        openai.api_key = ('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')
+        openai.api_key = (api_key.API_KEY)
         print('ready to answer')
         self.head = iCubHead()
         self.right_arm = iCubRightArm()
