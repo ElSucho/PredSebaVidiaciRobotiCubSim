@@ -1,7 +1,10 @@
-from agentspace import space, Agent
-import time
 import os
 import signal
+
+from download import download_all
+download_all()
+
+from agentspace import space, Agent
 from pyicubsim import iCubApplicationName
 from CameraAgent import CameraAgent
 from ViewerAgent import ViewerAgent
