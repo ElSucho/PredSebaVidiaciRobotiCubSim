@@ -21,12 +21,19 @@ def download_emotion_model():
 def download_age_model():
     download_and_save("https://drive.google.com/uc?export=download&id=1QyJetIU3AJeO92HwEpgBIhzLrOG8-nfc","models/age/age_net.caffemodel")
 
+def download_face_model():
+    download_and_save("http://dl.dropboxusercontent.com/scl/fi/mpm1keew3h1s7j5mdi2pm/shape_predictor_68_face_landmarks.dat?rlkey=dosf2pxz0emoyrxu1kb5ak4ir&st=ltt1zwe4&dl=0","shape_predictor_68_face_landmarks.dat")   
 
 
 def download_all():
     download_age_model()
     download_Yolo3_model()
     download_emotion_model()
+    download_face_model()
+
+    if not os.path.exists("people"):
+    # Create the directory
+        os.makedirs("people")
 
 
 if __name__ == "__main__":
